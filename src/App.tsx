@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Navigation } from "./components/Navigation";
+import AuthPage from "./pages/AuthPage";
+import SqueezePage from "./pages/SqueezePage";
+import StatisticPage from "./pages/StatisticPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<AuthPage />} />
+          <Route path="/squeeze" element={<SqueezePage />} />
+          <Route path="/statistic" element={<StatisticPage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

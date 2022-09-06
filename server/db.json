@@ -1,0 +1,43 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "login": "egor",
+      "password": "1234"
+    },
+    {
+      "id": 2,
+      "login": "igor",
+      "password": "1234"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "number": "22",
+      "userId": 1,
+      "name": "stas"
+    },
+    {
+      "id": 2,
+      "number": "23",
+      "userId": 1,
+      "name": "stas"
+    },
+    {
+      "id": 3,
+      "number": "24",
+      "userId": 1,
+      "name": "stas"
+    },
+    {
+      "id": 4,
+      "number": "25",
+      "userId": 2,
+      "name": "stas"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
