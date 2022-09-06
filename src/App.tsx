@@ -4,16 +4,30 @@ import { Navigation } from "./components/Navigation";
 import AuthPage from "./pages/AuthPage";
 import SqueezePage from "./pages/SqueezePage";
 import StatisticPage from "./pages/StatisticPage";
+import WithNavigation from "./components/WithNavigation";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation />
         <Routes>
           <Route path="/" element={<AuthPage />} />
-          <Route path="/squeeze" element={<SqueezePage />} />
-          <Route path="/statistic" element={<StatisticPage />} />
+          <Route
+            path="/squeeze"
+            element={
+              <WithNavigation>
+                <SqueezePage />
+              </WithNavigation>
+            }
+          />
+          <Route
+            path="/statistic"
+            element={
+              <WithNavigation>
+                <StatisticPage />
+              </WithNavigation>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>

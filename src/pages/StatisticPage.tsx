@@ -30,7 +30,6 @@ const StatisticPage = () => {
   useEffect(() => {
     getStatistic(limit, offset, sort).then(
       ({ data, headers }: { data: IContact[]; headers: IContent }) => {
-        // console.log(headers["content-length"]);
         setStatistics(data);
         setHeaders(headers);
         setPagesCount(Math.ceil(headers["content-length"] / limit));

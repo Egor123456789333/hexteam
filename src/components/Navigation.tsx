@@ -15,7 +15,7 @@ export function Navigation() {
             fontSize: "150%",
           }}
         >
-          React 20222
+          SQUEZELINK
         </span>
         <span>
           <Nav style={{ color: "white" }}>
